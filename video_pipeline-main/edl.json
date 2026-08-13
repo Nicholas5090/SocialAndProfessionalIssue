@@ -1,0 +1,200 @@
+{
+  "project": "BTIS3053_2026B_kindergarten_multicam",
+  "version": 1,
+  "master_zero": "Audio sync event at master time T = 0. All t_in/t_out below are master time; the renderer derives each source timecode as src = T + offset(camera), reading offsets from out/sync_report.json so the EDL never has to be rewritten if the offsets are re-measured.",
+  "sync_source": "out/sync_report.json",
+
+  "output": {
+    "file": "out/final_video.mp4",
+    "width": 1280,
+    "height": 720,
+    "fps": 30,
+    "audio_fps": 44100,
+    "video_bitrate": "4000k"
+  },
+
+  "cameras": {
+    "cam1": "front left, medium wide on stage",
+    "cam2": "front right, close-up on performers",
+    "cam3": "wide back, full stage and audience",
+    "cam4": "side angle, wide with audience foreground"
+  },
+
+  "audio": {
+    "gain": 0.85,
+    "gain_note": "Cameras 1 and 2 peak at 0.0 dBFS in the original recordings - the drums overloaded the camera microphones before we ever touched the footage, and that clipping cannot be undone. This 0.85 (about -1.4 dB) keeps headroom so the AAC encoder does not add further distortion on top, and brings the integrated loudness closer to the -14 LUFS streaming target.",
+    "bed": {
+      "camera": "cam1",
+      "note": "Camera 1 is the only source spanning the whole body, so it carries the continuous bed. A single bed means no cut ever produces an audio discontinuity."
+    },
+    "overrides": [
+      {
+        "enabled": true,
+        "camera": "cam2",
+        "t_in": 1.0,
+        "t_out": 42.0,
+        "crossfade": 1.0,
+        "reason": "Camera 2 sits closest to the drums, so its audio is used across the drum section. Crossfaded in and out because the clips are frame-aligned, so no phase artefact occurs. Set enabled=false to fall back to the Camera 1 bed alone."
+      }
+    ]
+  },
+
+  "title": {
+    "duration": 5.0,
+    "lines": ["Kindergarten Graduation Ceremony", "2026"],
+    "subtitle": "Multi-Camera Highlight",
+    "fade": 1.0
+  },
+
+  "credits": {
+    "duration": 8.0,
+    "lines": [
+      "Recorded with four cameras",
+      "Synchronised by audio onset cross-correlation",
+      "Edited from a machine-readable Editing Decision List",
+      "",
+      "Every editing decision was reviewed and approved by a human editor.",
+      "This is a semi-automated pipeline, not full automation.",
+      "",
+      "Footage processed entirely offline. No video was uploaded to any cloud service.",
+      "Recorded and shared with the consent of participants and guardians."
+    ],
+    "fade": 1.5
+  },
+
+  "segments": [
+    {
+      "id": 1,
+      "t_in": -48.0,
+      "t_out": -40.0,
+      "camera": "cam3",
+      "reason": "Wide back camera establishes the full stage, the audience and the scale of the hall before any close work.",
+      "transition": "fade_in",
+      "transition_sec": 1.0,
+      "lower_third": {
+        "text": "Graduation Performance",
+        "at": 1.5,
+        "duration": 4.0
+      },
+      "reviewed_by": "",
+      "review_note": ""
+    },
+    {
+      "id": 2,
+      "t_in": -40.0,
+      "t_out": -31.0,
+      "camera": "cam1",
+      "reason": "Front-left camera is tighter on the group choreography, so the movement reads clearly after the wide establishing shot.",
+      "transition": "cut",
+      "reviewed_by": "",
+      "review_note": ""
+    },
+    {
+      "id": 3,
+      "t_in": -31.0,
+      "t_out": -23.0,
+      "camera": "cam4",
+      "reason": "Side angle puts the audience in the foreground, showing the performance in its setting rather than in isolation.",
+      "transition": "cut",
+      "reviewed_by": "",
+      "review_note": ""
+    },
+    {
+      "id": 4,
+      "t_in": -23.0,
+      "t_out": -14.0,
+      "camera": "cam1",
+      "reason": "Return to front-left for the synchronised arm sequence, which is the best-framed moment of the opening routine.",
+      "transition": "cut",
+      "reviewed_by": "",
+      "review_note": ""
+    },
+    {
+      "id": 5,
+      "t_in": -14.0,
+      "t_out": -4.0,
+      "camera": "cam3",
+      "reason": "Wide back camera captures the whole formation as the group spreads across the stage.",
+      "transition": "cut",
+      "reviewed_by": "",
+      "review_note": ""
+    },
+    {
+      "id": 6,
+      "t_in": -4.0,
+      "t_out": 6.0,
+      "camera": "cam1",
+      "reason": "Front-left covers the handover from the opening routine into the drum section. Crossfade marks the change of section.",
+      "transition": "crossfade",
+      "transition_sec": 1.0,
+      "reviewed_by": "",
+      "review_note": ""
+    },
+    {
+      "id": 7,
+      "t_in": 6.0,
+      "t_out": 16.0,
+      "camera": "cam2",
+      "reason": "Camera 2 is the only close framing available. It carries the drum performance where facial expression is the content.",
+      "transition": "cut",
+      "lower_third": {
+        "text": "Drum Performance",
+        "at": 1.0,
+        "duration": 4.0
+      },
+      "reviewed_by": "",
+      "review_note": ""
+    },
+    {
+      "id": 8,
+      "t_in": 16.0,
+      "t_out": 24.0,
+      "camera": "cam4",
+      "reason": "Cut wide to re-establish the full drum line, so the close-ups do not lose the audience's sense of the whole group.",
+      "transition": "cut",
+      "reviewed_by": "",
+      "review_note": ""
+    },
+    {
+      "id": 9,
+      "t_in": 24.0,
+      "t_out": 33.0,
+      "camera": "cam2",
+      "reason": "Back to the close framing for the strongest passage of the drum routine.",
+      "transition": "cut",
+      "reviewed_by": "",
+      "review_note": ""
+    },
+    {
+      "id": 10,
+      "t_in": 33.0,
+      "t_out": 37.5,
+      "camera": "cam1",
+      "reason": "Front-left shows the full drum line head on as the routine builds to its finish.",
+      "transition": "cut",
+      "reviewed_by": "",
+      "review_note": ""
+    },
+    {
+      "id": 11,
+      "t_in": 37.5,
+      "t_out": 41.5,
+      "camera": "cam2",
+      "reason": "Final close framing on the performers. Camera 2 stops recording at T = 43.05, so this is the last close-up the footage allows.",
+      "transition": "cut",
+      "reviewed_by": "",
+      "review_note": ""
+    },
+    {
+      "id": 12,
+      "t_in": 41.5,
+      "t_out": 44.5,
+      "camera": "cam3",
+      "reason": "Wide back camera for the closing moment. The performance ends at about T = +43.5 and the hall lights drop immediately after, so the cut stops here rather than running on into the slide presentation that follows. Camera 3 is the only wide still recording at this point. Crossfade closes the sequence rather than cutting hard to the credits.",
+      "transition": "crossfade",
+      "transition_sec": 0.8,
+      "reviewed_by": "",
+      "review_note": ""
+    }
+  ]
+}

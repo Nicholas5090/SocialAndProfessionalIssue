@@ -1,0 +1,13 @@
+id,t_in_master,t_out_master,duration,camera,src_in,src_out,out_start,transition,transition_sec,reason,reviewed_by,review_note
+1,-48.00,-40.00,8.00,cam3,1.02,10.02,4.00,fade_in,1.0,"Wide back camera establishes the full stage, the audience and the scale of the hall before any close work.",,
+2,-40.00,-31.00,9.00,cam1,17.45,26.45,13.00,cut,,"Front-left camera is tighter on the group choreography, so the movement reads clearly after the wide establishing shot.",,
+3,-31.00,-23.00,8.00,cam4,8.63,16.63,22.00,cut,,"Side angle puts the audience in the foreground, showing the performance in its setting rather than in isolation.",,
+4,-23.00,-14.00,9.00,cam1,34.45,43.45,30.00,cut,,"Return to front-left for the synchronised arm sequence, which is the best-framed moment of the opening routine.",,
+5,-14.00,-4.00,10.00,cam3,36.02,46.02,39.00,cut,,Wide back camera captures the whole formation as the group spreads across the stage.,,
+6,-4.00,6.00,10.00,cam1,52.45,63.45,48.00,crossfade,1.0,Front-left covers the handover from the opening routine into the drum section. Crossfade marks the change of section.,,
+7,6.00,16.00,10.00,cam2,6.00,16.00,59.00,cut,,Camera 2 is the only close framing available. It carries the drum performance where facial expression is the content.,,
+8,16.00,24.00,8.00,cam4,55.63,63.63,69.00,cut,,"Cut wide to re-establish the full drum line, so the close-ups do not lose the audience's sense of the whole group.",,
+9,24.00,33.00,9.00,cam2,24.00,33.00,77.00,cut,,Back to the close framing for the strongest passage of the drum routine.,,
+10,33.00,37.50,4.50,cam1,90.45,94.95,86.00,cut,,Front-left shows the full drum line head on as the routine builds to its finish.,,
+11,37.50,41.50,4.00,cam2,37.50,41.50,90.50,cut,,"Final close framing on the performers. Camera 2 stops recording at T = 43.05, so this is the last close-up the footage allows.",,
+12,41.50,44.50,3.00,cam3,90.72,94.52,93.70,crossfade,0.8,"Wide back camera for the closing moment. The performance ends at about T = +43.5 and the hall lights drop immediately after, so the cut stops here rather than running on into the slide presentation that follows. Camera 3 is the only wide still recording at this point. Crossfade closes the sequence rather than cutting hard to the credits.",,
