@@ -61,6 +61,7 @@ def check_physical(tl, c: Checks):
         c.add(0 <= s.src_in and s.src_out <= dur,
               f"segment {s.id} inside {s.camera} file",
               f"src {s.src_in:.2f}..{s.src_out:.2f}s of {dur:.2f}s")
+        # Handle offset check: ensures segment transition handles stay within physical recording bounds
         c.add(lo <= s.t_in - s.handle and s.t_out <= hi,
               f"segment {s.id} within {s.camera} coverage",
               f"T {s.t_in - s.handle:.2f}..{s.t_out:.2f}s in {lo:.2f}..{hi:.2f}s")

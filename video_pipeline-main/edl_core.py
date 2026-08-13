@@ -32,6 +32,7 @@ import json
 from dataclasses import dataclass, field
 from pathlib import Path
 
+# Define key file paths relative to this script
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 OUT = HERE / "out"
