@@ -34,6 +34,7 @@ MIN_RUNTIME, MAX_RUNTIME = 60.0, 180.0
 
 
 class Checks:
+  # The verification result collector is used to record the PASS/FAIL status, name, and detailed information of each individual test.
     def __init__(self):
         self.rows = []
 
