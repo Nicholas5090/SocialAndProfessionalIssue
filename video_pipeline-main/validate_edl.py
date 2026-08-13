@@ -89,6 +89,7 @@ def check_physical(tl, c: Checks):
 
 
 def check_requirements(tl, c: Checks):
+  # Business Specifications/Work Requirements Verification: Check whether it meets the editing art indicators and template requirements.
     angles = {s.camera for s in tl.segments}
     n_switch = switches(tl.segments)
     lowers = [s for s in tl.segments if s.lower_third]
