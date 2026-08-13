@@ -86,7 +86,9 @@ def load_audio(path: Path) -> np.ndarray:
 # ---------------------------------------------------------------------- features
 
 def _frames(audio: np.ndarray) -> np.ndarray:
+    # Calculate max full frames that fit into the audio array
     n = max(0, (len(audio) - WIN) // HOP + 1)
+    # Construct 2D index matrix via NumPy broadcasting: (1, WIN) + (n, 1) -> (n, WIN)
     idx = np.arange(WIN)[None, :] + HOP * np.arange(n)[:, None]
     return audio[idx] * np.hanning(WIN)[None, :]
 
