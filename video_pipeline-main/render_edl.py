@@ -60,6 +60,7 @@ def title_card(tl, w: int, h: int, font: str, bold: str):
 
     layers = [ColorClip((w, h), color=BG, duration=dur)]
 
+    # Main Heading: font size is 4.8% of width; box height is 42% of canvas height, centered at Y=18%
     # Caption boxes get an explicit height. Left to size themselves they come out
     # too short for a heading that wraps, and the last line is clipped.
     heading = TextClip(font=bold, text="\n".join(spec["lines"]),
@@ -68,6 +69,7 @@ def title_card(tl, w: int, h: int, font: str, bold: str):
                        text_align="center", vertical_align="center", duration=dur)
     layers.append(heading.with_position(("center", int(h * 0.18))))
 
+    # Subtitle: font size is 2.8% of width, positioned at Y=62%
     if spec.get("subtitle"):
         sub = TextClip(font=font, text=spec["subtitle"],
                        font_size=int(w * 0.028), color=(190, 195, 210),
