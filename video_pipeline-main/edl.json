@@ -12,7 +12,7 @@
     "audio_fps": 44100,
     "video_bitrate": "4000k"
   },
-
+//camera
   "cameras": {
     "cam1": "front left, medium wide on stage",
     "cam2": "front right, close-up on performers",
