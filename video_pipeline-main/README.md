@@ -169,7 +169,7 @@ at 30 fps):
 | cam3 wide back | 50.02 s | 95.71 s | −50.02 → +45.69 |
 | cam4 side angle | 39.63 s | 97.11 s | −39.63 → +57.48 |
 
-## Result camera ##
+## Result camera #
 All four cameras overlap for only **43.05 s**, which is below the 60 s minimum
 final length — the cut cannot be built from the four-camera window alone. Two or
 more cameras are live across **107.5 s**, from T = −50.02 to T = +57.48, and
