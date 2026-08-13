@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 BTIS3053 multi-camera pipeline - shared EDL resolution.
-
+# this is spi project
 This is the bridge between the Editing Decision List and the code. The EDL
 stores only master time, camera and intent; everything concrete - source
 timecodes, output positions, audio regions, total runtime - is derived here so
