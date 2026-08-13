@@ -13,6 +13,8 @@ a real step rather than a claim.
 footage, audio or still frame is uploaded to any cloud or AI service at any
 point in the pipeline.
 
+**spacific video** This pipeline is only suitable for target video.
+
 ---
 
 ## Requirements
