@@ -186,3 +186,5 @@ that is the window the EDL uses.
 - **One sync event.** Offsets are constant, which assumes no camera drifted or
   paused mid-recording. The pairwise check would expose a gross drift but not a
   slow one.
+
+  contribute by group 8
