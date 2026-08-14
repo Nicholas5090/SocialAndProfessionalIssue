@@ -33,6 +33,7 @@ COLUMNS = 4
 
 
 def grab(video: Path, t: float):
+    """Extract a single frame as a PIL RGB image from the video at time `t` using FFmpeg."""
     from PIL import Image
     proc = subprocess.run(
         ["ffmpeg", "-v", "error", "-ss", f"{t:.3f}", "-i", str(video),
