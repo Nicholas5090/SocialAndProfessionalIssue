@@ -52,6 +52,7 @@ class Checks:
 
 
 def check_physical(tl, c: Checks):
+  # Physical legitimacy check: Checks whether the editing decision exceeds the physical boundaries of the actual shot/recorded material.
     for s in tl.segments:
         lo, hi = tl.coverage(s.camera)
         dur = tl.durations[s.camera]
