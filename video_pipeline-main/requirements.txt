@@ -1,0 +1,6 @@
+numpy
+scipy
+moviepy
+pillow
+matplotlib
+pytest
