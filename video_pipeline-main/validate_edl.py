@@ -30,7 +30,7 @@ from pathlib import Path
 from edl_core import HERE, OUT, resolve, load_edl, load_sync, switches
 
 MIN_ANGLES, MIN_SWITCHES = 2, 3
-MIN_RUNTIME, MAX_RUNTIME = 60.0, 180.0
+MIN_RUNTIME, MAX_RUNTIME = 60.0, 180.0 # Length limit: 60 seconds ~ 180 seconds
 
 
 class Checks:
